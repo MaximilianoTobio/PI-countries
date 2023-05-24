@@ -22,7 +22,7 @@ const { conn, Country } = require('./src/db.js');
 const axios = require('axios')
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(async () => {
+conn.sync({ force: false }).then(async () => {
   server.listen(3001, async () => {
     const allCountries = await Country.findAll();
     if(!allCountries.length){

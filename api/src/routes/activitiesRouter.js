@@ -1,14 +1,10 @@
 const { Router } = require('express');
-// Importar todos los routers;
-// Ejemplo: const authRouter = require('./auth.js');
-const { getActivityHandler, postActivityHandler } = require("../handlers/activitiesHandlers");
+//requiero los handlers para activities
+const { getActivityHandler, postActivityHandler,putActivityHandler } = require("../handlers/activitiesHandlers");
 
 const activitiesRouter = Router();
 
-// Configurar los routers
-// Ejemplo: router.use('/auth', authRouter);
-activitiesRouter.get("/", getActivityHandler);
-activitiesRouter.post("/", postActivityHandler);
-
-
+activitiesRouter.get("/", getActivityHandler);//get all activities
+activitiesRouter.post("/", postActivityHandler);//create activity
+activitiesRouter.put("/:id", putActivityHandler);//update activity
 module.exports = activitiesRouter;
