@@ -7,7 +7,7 @@ const { Op } = require("sequelize");
 const getCountries = async (name) => {
   if (!name) {
     return await Country.findAll({
-      include: Activity,
+      include: Activity,// aca incluyo al modelo para que me sea más fácil el filtrado de actividades
     });
   }
 
@@ -27,12 +27,6 @@ const getCountries = async (name) => {
   return countries;
 };
 
-// const getCountryById = async (id) => {
-//   // Define una función getCountryById que se encarga de obtener un país por su identificador.
-
-//   return await Country.findByPk(id);
-//   // Realiza una consulta a la tabla Country utilizando el método findByPk, que busca un registro por su clave primaria (en este caso, el identificador).
-// }
 const getCountryById = async (id) => {
   // Define una función `getCountryById` que se encarga de obtener un país por su identificador.
 

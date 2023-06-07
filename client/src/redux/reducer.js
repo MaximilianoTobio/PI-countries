@@ -72,6 +72,13 @@ import {
           loading: false
         };
         case ORDER_BY_POPULATION:
+          if(action.payload === 'All'){
+            return {
+            ...state,
+            sortPopulation: state.countries,
+            sortBy: 'activity',
+            sortOrder: null,
+          }}else{
           // Comprueba el tipo de orden recibido en el payload
           if (action.payload === 'Min') {
             // Si el orden es de menor a mayor
@@ -99,8 +106,17 @@ import {
               sortBy: 'population', // Actualiza el tipo de ordenamiento a 'population'
               sortOrder: 'Max', // Actualiza el orden de mayor a menor
             };
-          }
+          }}
+        
+          
           case ORDER:
+            if(action.payload === 'All'){
+              return {
+              ...state,
+              countriesOrder: state.countries,
+              sortBy: 'activity',
+              sortOrder: null,
+            }}else{
             if (action.payload === 'A-Z') {
               // Si el orden es ascendente
               // Utiliza el método sort para ordenar los países por nombre de la A a la Z
@@ -125,7 +141,7 @@ import {
                 sortBy: 'alphabetical', // Actualiza el tipo de ordenamiento a 'alphabetical'
                 sortOrder: 'Z-A', // Actualiza el orden descendente
               };
-            }
+            }}
           
           case FILTER_BY_CONTINENT:
             const continent = action.payload; 
@@ -148,6 +164,14 @@ import {
             };
             case FILTER_BY_ACTIVITY:
               const season = action.payload;
+              if(season === 'All'){
+                return {
+                ...state,
+                countriesWithActivities: state.countries,
+                sortBy: 'activity',
+                sortOrder: null,
+              }}else{
+              
               const countriesWithActivities = state.countries.filter(country => country.activities.length > 0);
               const filteredCountriesByActivity = countriesWithActivities.filter(country => country.activities[0].season === season);
               
@@ -157,7 +181,7 @@ import {
                 sortBy: 'activity',
                 sortOrder: null
               };
-            
+              }
             
             
          

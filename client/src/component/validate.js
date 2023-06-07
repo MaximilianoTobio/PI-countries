@@ -11,9 +11,12 @@ export const validate = (input) => {
       errors.name = "El nombre es obligatorio";
     } else if (input.name.length < 3) {
       errors.name = "El nombre debe tener al menos 3 caracteres";
-    } else if (!/^[a-zA-Z\s]+$/.test(input.name)) {
+    } else if (input.name.length > 30) {
+      errors.name = "El nombre no debe exceder los 30 caracteres";
+    } else if (!/^[a-zA-ZñÑ\s]+$/.test(input.name)) {
       errors.name = "El nombre solo debe contener letras";
     }
+    
   
     if (!input.difficulty) {
       errors.difficulty = "Completa el rango de dificultad";

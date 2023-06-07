@@ -4,7 +4,7 @@ import { searchCountries } from '../redux/actions';
 
 import style from './SearchBar.module.css';
 
-const SearchBar = () => {
+const SearchBar = ({onPageChange}) => {
   const dispatch = useDispatch();
   const [searchCountry, setSearchCountry] = useState('');
   const error = useSelector((state) => state.error);
@@ -16,6 +16,7 @@ const SearchBar = () => {
   const handleSearch = () => {
     dispatch(searchCountries(searchCountry));
     setSearchCountry('');
+    onPageChange(1)
   };
 
   const handlerCleaner = () => {
