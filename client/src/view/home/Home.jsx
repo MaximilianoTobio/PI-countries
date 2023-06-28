@@ -6,9 +6,9 @@ import {
   filterByContinent,
   orderByPopulation,
   order,
-} from "../redux/actions";
-import SearchBar from "./SearchBar";
-import Card from "./Card"; // Asumo que tienes un componente Card importado
+} from "../../redux/actions";
+import SearchBar from "../../component/searchbar/SearchBar";
+import Card from "../../component/card/Card"; // Asumo que tienes un componente Card importado
 
 import style from "./Home.module.css";
 

@@ -1,11 +1,11 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import LandingPage from './component/LandingPage';
-import Home from './component/Home';
-import FormActivity from './component/FormActivity';
-import DetailCountries from './component/DetailCountries';
-import Error404 from './component/Error404';
-import Nav from './component/Nav';
+import LandingPage from './view/landing/LandingPage';
+import Home from './view/home/Home';
+import FormActivity from './view/form/FormActivity';
+import DetailCountries from './view/detail/DetailCountries';
+import Error404 from './view/404/Error404';
+import Nav from './component/nav/Nav';
 import { useLocation } from 'react-router-dom';
 
 function App() {

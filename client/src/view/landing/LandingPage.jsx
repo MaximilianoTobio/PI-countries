@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import videobg from "../assets/videobg.mp4";
+import videobg from "../../assets/videobg.mp4";
 import style from "./LandingPage.module.css";
 
 function LandingPage() {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getAllCountries, createActivity } from "../redux/actions";
+import { getAllCountries, createActivity } from "../../redux/actions";
 import { useNavigate } from "react-router-dom";
 import { validate } from "./validate"; // Reemplaza 'ruta-del-archivo' con la ruta correcta
 import style from "./FormActivity.module.css";
