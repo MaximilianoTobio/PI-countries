@@ -10,16 +10,25 @@ const Nav = () => {
   return (
     <div className={style.nav}>
         {!isActivity && ( // Si no estás en la página de crear actividad, muestra el enlace a la página de crear actividad
+          <>
           <li>
           <Link to="/activity">
             <button className={style.button}>CREATE ACTIVITY</button>
           </Link>
         </li>
+        </>
         )}
         {!isHome && ( // Si no estás en la página de inicio, muestra el enlace a la página de inicio
           <li>
             <Link to="/home">
               <button className={style.button}>HOME</button>
+            </Link>
+          </li>
+        )}
+        {isHome && ( // Si no estás en la página de inicio, muestra el enlace a la página de inicio
+          <li>
+            <Link to="/">
+              <button className={style.button}>LOGOUT</button>
             </Link>
           </li>
         )}

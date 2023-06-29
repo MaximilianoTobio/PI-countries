@@ -14,6 +14,7 @@ import {
   
   const initialState = {
     countries: [],
+    selectCountry: [],
     countriesOrder: [],
     sortContinent: [],
     countriesWithActivities: [],
@@ -50,7 +51,7 @@ import {
       case SEARCH_COUNTRIES:
         return {
           ...state,
-          countries: action.payload,
+          selectCountry: action.payload,
           loading: false,
           error: ""
         };

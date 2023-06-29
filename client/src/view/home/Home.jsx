@@ -14,6 +14,7 @@ import style from "./Home.module.css";
 
 const Home = () => {
   const dispatch = useDispatch();
+  const selectCountry = useSelector((state) => state.selectCountry);
   const countries = useSelector((state) => state.countries);
   const continent = useSelector((state) => state.sortContinent);
   const population = useSelector((state) => state.sortPopulation);
@@ -31,6 +32,10 @@ const Home = () => {
   useEffect(() => {
     setCurrentData(countries);
   }, [countries]);
+  
+  useEffect(() => {
+    setCurrentData(selectCountry);
+  }, [selectCountry]);
 
   useEffect(() => {
     setCurrentData(continent);
