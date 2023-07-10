@@ -8,7 +8,7 @@
 [Ver demo en YouTube](https://www.youtube.com/embed/DZ2fuF29B68) ⬅️
     
 
-![texto alternativo](https://i.ytimg.com/an_webp/DZ2fuF29B68/mqdefault_6s.webp?du=3000&sqp=CMrX-qQG&rs=AOn4CLDf4X-ltDwNjjpQK95v3AxUjutdHw).
+![texto alternativo](https://i.ytimg.com/an_webp/DZ2fuF29B68/mqdefault_6s.webp?du=3000&sqp=CMywsKUG&rs=AOn4CLCp1-A3oysvh6v1zrMzqGpvwdPv3A).
 
 
 
